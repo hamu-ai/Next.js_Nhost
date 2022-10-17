@@ -6,9 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fix": "run-s fix:eslint fix:prettier ",
+    "fix:eslint": "eslint --ext .tsx --fix ",
+    "fix:prettier": "prettier --write .",
+    "check": "run-p check:* ",
+    "check:eslint": "eslint --ext .ts ",
+    "check:prettier": "prettier --check . "
   },
   "dependencies": {
+    "@apollo/client": "^3.7.0",
+    "@nhost/nextjs": "^1.7.7",
+    "@nhost/react": "^0.13.0",
+    "@nhost/react-apollo": "^4.7.6",
+    "graphql": "^16.6.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -17,8 +28,18 @@
     "@types/node": "18.11.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
-    "eslint": "8.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "autoprefixer": "^10.4.12",
+    "eslint": "^8.25.0",
     "eslint-config-next": "12.3.1",
-    "typescript": "4.8.4"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.4"
   }
 }
