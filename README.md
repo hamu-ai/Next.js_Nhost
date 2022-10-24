@@ -3,6 +3,6 @@ Nhostを使ってみた
 
 Hasura勉強中
 
-###　Vercel
+###　[Vercel](nextjsnhost.vercel.app)
 
-nextjsnhost.vercel.app
+
