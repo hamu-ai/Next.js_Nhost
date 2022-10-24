@@ -1,0 +1,32 @@
+query TODO {
+  todo {
+    id
+    title
+  }
+}
+
+mutation ADD_TODO($title: String!, $id: uuid!) {
+  insert_todo(objects: { title: $title, user_id: $id }) {
+    affected_rows
+  }
+}
+
+mutation UpDate_TODO($title: String!, $id: Int!) {
+  update_todo_by_pk(_set: { title: $title }, pk_columns: { id: $id }) {
+    id
+    title
+  }
+}
+
+mutation DELETE_TODO($id: Int!) {
+  delete_todo_by_pk(id: $id) {
+    id
+  }
+}
+
+subscription Subscription_TODO {
+  todo {
+    id
+    title
+  }
+}

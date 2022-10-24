@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Authenticated from "src/components/Authenticated";
-import SingOut from "src/components/SingOut";
+import GET_Query from "src/components/graphql/GET_Query";
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <Authenticated />
 
-      <h1>d</h1>
-
-      <div className="text-center">
-        <SingOut />
-      </div>
+      <GET_Query />
     </div>
   );
 };
