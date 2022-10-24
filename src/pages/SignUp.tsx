@@ -1,7 +1,9 @@
-import { NextPage } from "next";
+import { ReactElement } from "react";
 import SignUp from "src/components/SignUp";
 
-const SignUpPage: NextPage = () => {
+import { NextPageWithLayout } from "./_app";
+
+const SignUpPage: NextPageWithLayout = () => {
   return (
     <div>
       <SignUp />
@@ -9,4 +11,7 @@ const SignUpPage: NextPage = () => {
   );
 };
 
+SignUpPage.getLayout = function getLayout(page: ReactElement) {
+  return <>{page}</>;
+};
 export default SignUpPage;
