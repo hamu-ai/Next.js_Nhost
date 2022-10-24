@@ -13,7 +13,6 @@ const SignIn: FC = () => {
     signInEmailPassword,
     isLoading,
     isSuccess,
-    needsEmailVerification,
 
     isError,
   } = useSignInEmailPassword();
@@ -27,7 +26,7 @@ const SignIn: FC = () => {
     router.push("/");
   }
 
-  const disableForm = isLoading || needsEmailVerification;
+  const disableForm = isLoading;
   return (
     <div>
       {isError ? (
