@@ -1,12 +1,18 @@
-import { NextPage } from "next";
+import { ReactElement } from "react";
 import SignIn from "src/components/SignIn";
 
-const SignInPage: NextPage = () => {
+import { NextPageWithLayout } from "./_app";
+
+const SignInPage: NextPageWithLayout = () => {
   return (
     <div>
       <SignIn />
     </div>
   );
+};
+
+SignInPage.getLayout = function getLayout(page: ReactElement) {
+  return <>{page}</>;
 };
 
 export default SignInPage;
